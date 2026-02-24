@@ -6,6 +6,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Search, Tv, Trophy, Clock, RefreshCw, AlertCircle, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Analytics } from '@vercel/analytics/react';
 import type { Match } from './types';
 
 const API_KEY = import.meta.env.VITE_ALLSPORTS_API_KEY || 'a38fec8b57cb914393b6ba8e055f267fce91dec0b31c9874ce72527210bd86b8';
@@ -223,6 +224,7 @@ export default function App() {
           Conectado via AllSportsAPI WebSocket • {new Date().getFullYear()} FutAoVivo
         </p>
       </footer>
+      <Analytics />
     </div>
   );
 }
